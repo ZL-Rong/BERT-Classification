@@ -1,0 +1,7 @@
+database/credentials.json
+
+__pycache__/
+my_model*/
+/test_trainer/
+
+.idea/
