@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fake Tweets Detector</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='styles/styles.css')}}"
+    />
+    <link
+      rel="shortcut icon"
+      href="{{ url_for('static', filename='favicon2.ico') }}"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div id="top-nav-bar">
+        <h2 class="title">Fake Tweets Detector</h2>
+      </div>
+    </header>
+
+    <div class="ml-container" align="center">
+      <form class="form" action="{{url_for('predict')}}" method="post">
+        <p>Enter Your Tweet</p>
+        <textarea
+          name="sentence"
+          rows="10"
+          cols="70"
+          placeholder="ENTER FAKE TWEETS..."
+        ></textarea>
+        <br />
+
+        {% with messages = get_flashed_messages() %} {% if messages %} {% for
+        message in messages %}
+        <p><i>{{ message }}</i></p>
+        {% endfor %} {% endif %} {% endwith %}
+        <input
+          type="submit"
+          class="button button1"
+          value="Detect"
+          method="post"
+        />
+      </form>
+    </div>
+  </body>
+</html>
