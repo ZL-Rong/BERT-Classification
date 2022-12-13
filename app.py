@@ -60,7 +60,7 @@ def sentence_prediction(sentence, model):
         token_type_ids
     )
     #sigmoid for Binary Classification while softmax for Multi-class
-    outputs = torch.sigmoid(outputs.last_hidden_state).cpu().detach().numpy()
+    outputs = torch.sigmoid(outputs).cpu().detach().numpy()
     return outputs[0][0]
     # return clf[0][0]
 
@@ -88,7 +88,7 @@ def predict():
 if __name__ == "__main__":
     # MODEL = BertModel.from_pretrained("bert-base-cased")
     #MODEL = nn.DataParallel(MODEL)
-    MODEL = BertModel.from_pretrained("my_model_bak/")
+    MODEL = BertModel.from_pretrained("./my_model/")
     MODEL.to(DEVICE)
     MODEL.eval()
     app.run(debug=True, host="127.0.0.1")
