@@ -6,9 +6,14 @@
 3. conda install -c anaconda flask
 4. conda install -c anaconda jinja2
 5. conda install -c anaconda numpy
+6. conda install -c anaconda mysql-connector-python
+7. conda install -c anaconda psycopg2
+8. pip install neo4j
 
 ## Training the model
 1. run training_model.py
+OR
+2. run training_model_db.py
 
 ## Running the flask server
 1. python app.py
