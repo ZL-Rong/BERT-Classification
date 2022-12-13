@@ -17,4 +17,4 @@
 ## Acknowledge
 1. Huggingface bert-base-cased: https://huggingface.co/bert-base-cased
 2. Datasets: https://github.com/prathameshmahankal/Fake-News-Detection-Using-BERT/tree/main/data
-3. Other Reference: https://github.com/ac4mm/Fake-Detector
+3. Other Reference: https://arxiv.org/abs/1810.04805
